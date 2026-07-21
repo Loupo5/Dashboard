@@ -1,7 +1,10 @@
 :root {
     --brown-regular: oklch(55% 0.09 70);   
     --brown-light:   oklch(70% 0.08 75);   
-    --brown-lightest: oklch(88% 0.05 80);  
+    --brown-lightest: oklch(88% 0.05 80);
+    --brown-ultralight: oklch(94% 0.03 80);
+    --moss-light:   oklch(85% 0.06 130); 
+    --moss-medium:  oklch(65% 0.08 130); 
 }
 
 * {
@@ -18,7 +21,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
     border: 1px solid black;
 }
 
@@ -26,6 +29,28 @@ body {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.header .top {
+    margin-top: 0.3em;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr 2fr;
+}
+.top:first-child {
+    text-align: right;
+}
+.top:first-child svg {
+    width: 1.7em;
+    height: 1.7em;
+    margin-right: 1em;
+}
+.top input {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--moss-light);
 }
 
 
@@ -56,5 +81,5 @@ body {
 .content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: var(--brown-lightest);
+    background: linear-gradient(135deg, var(--brown-lightest), var(--brown-ultralight));
 }
