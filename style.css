@@ -194,6 +194,12 @@ body {
     font-size: 1.3em;
     font-weight: 600;
 }
+.content-left-item {
+    border-left: 1rem solid var(--moss-medium);
+}
+.content-left-item > * {
+    margin-left: 5px;
+}
 
 .content-left > div {
     font-size: 1.1em;
