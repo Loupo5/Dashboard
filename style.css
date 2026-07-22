@@ -13,9 +13,7 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: lightgreen;
-}
+
 
 .wrapper {
     height: 100vh;
@@ -204,4 +202,25 @@ body {
 .content-left > div {
     font-size: 1.1em;
     font-weight: 500;
+}
+
+.content-right {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr 4fr 1fr;
+}
+.content-right-top {
+    background-color: var(--moss-light);
+    border-radius: 20px;
+}
+.content-right-top > *{
+    margin-left: 5px;
+}
+.content-right > p:first-child {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.content-right div p:first-child {
+    font-size: 1.3em;
+    font-weight: 600;
 }
