@@ -21,7 +21,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows:1fr 4fr;
     border: 1px solid black;
 }
 
@@ -162,14 +162,40 @@ body {
     display: grid;
     gap: 2em;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:  0.2fr 1fr 1fr 1fr ;
+    grid-template-rows:  0.2fr 1fr 1fr 1fr 0.2fr;
 }
 .content-left > div {
     background-color: var(--moss-light);
     border-radius: 10px;
 }
+.content-left > div:nth-child(2n) { /* affects the right boxes*/
+    margin-right: 2em;
+}
+.content-left > div:nth-child(2n + 1) { /*affects he left boxes*/
+    margin-left: 2em;
+}
 .content-left > p:first-child {
     font-size: 2em;
     font-weight: bold;
-    margin: 5px;
+    margin: 5px 1em;
+}
+
+.content-svg-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+}
+.content-left svg {
+    width: 2.6em;
+    height: 2.6em;
+}
+.content-left > div p:first-child {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.content-left > div {
+    font-size: 1.1em;
+    font-weight: 500;
 }
