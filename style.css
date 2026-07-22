@@ -215,7 +215,7 @@
 .content-right-top > *{
     margin-left: 5px;
 }
-.content-right > p:first-child {
+.content-right > p {
     font-size: 2em;
     font-weight: bold;
     margin: 5px 0;
@@ -223,4 +223,28 @@
 .content-right div p:first-child {
     font-size: 1.3em;
     font-weight: 600;
+}
+.content-right-bottom {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--moss-light);
+    border-radius: 20px;
+}
+.content-right-bottom > * {
+    margin-left: 5px;
+}
+.content-right-bottom > div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.content-right-bottom p {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.content-right-bottom img {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    margin: 0 5px;
 }
