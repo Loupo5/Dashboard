@@ -154,4 +154,22 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background: linear-gradient(135deg, var(--brown-lightest), var(--brown-ultralight));
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.content-left {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  0.2fr 1fr 1fr 1fr ;
+}
+.content-left > div {
+    background-color: var(--moss-light);
+    border-radius: 10px;
+}
+.content-left > p:first-child {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 5px;
 }
