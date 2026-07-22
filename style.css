@@ -108,6 +108,22 @@ body {
     border-radius: 50%;
     margin: 0 1em;
 }
+.header-bottom-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.header-bottom-right > div{
+    margin-bottom: 2em;
+    margin-right: 1em;
+    width: 7em;
+    height: 2em;
+    background: var(--moss-light);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .sidebar {
