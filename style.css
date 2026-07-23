@@ -226,12 +226,16 @@
 }
 .content-right-bottom {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(80px, auto);
     background-color: var(--moss-light);
     border-radius: 20px;
+    overflow-y: auto;
+    height: 240px;
+    min-height: 0;
 }
 .content-right-bottom > * {
     margin-left: 5px;
+    min-height: 0;
 }
 .content-right-bottom > div {
     display: flex;
@@ -242,9 +246,10 @@
     font-size: 1.1em;
     font-weight: 600;
 }
+
 .content-right-bottom img {
     width: 3.5em;
     height: 3.5em;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 5px 0;
 }
