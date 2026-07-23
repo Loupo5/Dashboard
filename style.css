@@ -158,7 +158,7 @@
     width: 7.2em;
     height: 2.1em;
 }
-*:hover {
+*:not(.wrapper):hover {
     transform: scale(1.0005);
 }
 * {
