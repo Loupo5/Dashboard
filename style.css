@@ -21,9 +21,28 @@
     grid-template-columns: 1fr 4fr;
     grid-template-rows:1fr 4fr;
     border: 1px solid black;
+    filter: blur(0px);
+}
+
+.wrapper:hover .header,
+.wrapper:hover .sidebar,
+.wrapper:hover .content{
+    filter: blur(0.5px);
+}
+
+.wrapper .header:hover,
+.wrapper .sidebar:hover,
+.wrapper .content:hover {
+    filter: blur(0px);
+}
+.header,
+.sidebar,
+.content {
+    transition: filter 0.4s ease-in-out;
 }
 
 .header {
+    filter: blur(0px);
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background-color: whitesmoke;
@@ -55,11 +74,23 @@
     height: 1.7em;
     margin-right: 1em;
 }
+.top:first-child svg:hover {
+    width: 1.8em;
+    height: 1.8em;
+}
+.top svg{
+    transition: height 0.4s ease-in-out width 0.4s ease-in-out;
+}
 .top input {
     height: 2em;
     width: 100%;
     border-radius: 20px;
     background-color: var(--brown-ultralight);
+}
+.top input:hover {
+    height: 2.1em;
+    width: 103%;
+    background-color: color-mix(in srgb, var(--brown-ultralight) 90%, white);
 }
 .top img {
     height: 3.5em;
@@ -121,10 +152,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: width 0.4s ease-in-out height 0.4s ease-in-out;
+}
+.header-bottom-right > div:hover {
+    width: 7.2em;
+    height: 2.1em;
+}
+*:hover {
+    transform: scale(1.0005);
+}
+* {
+    transition: transform 0.4s ease-in-out;
 }
 
-
 .sidebar {
+    filter: blur(0px);
+    transition: blur 0.4s ease-in-out;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     background-color: var(--brown-light);
@@ -137,18 +180,34 @@
     justify-content: left;
     align-items: center;
     font-size: 1.5em;
+    transition: font-size 0.4s ease-in-out;
+}
+.sidebar > div:hover {
+    font-size: 1.6em;
+    color: color-mix(in srgb, whitesmoke 80%, var(--moss-medium))
 }
 .sidebar .title {
     font-size: 2.5em;
+    transition: 0.4s ease-in-out;
+}
+.sidebar .title:hover {
+    font-size: 2.6em;
 }
 .sidebar svg {
     width: 1.7em;
     height: 1.7em;
     margin-left: 0.5rem;
     fill: whitesmoke;
+    transition: width 0.4s ease-in-out height 0.4s ease-in-out;
+}
+.sidebar svg:hover {
+    width: 1.8em;
+    height: 1.8em;
+    fill: color-mix(in srgb, whitesmoke 70%, var(--moss-medium))
 }
 
 .content {
+    filter: blur(0px);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background: linear-gradient(135deg, var(--brown-lightest), var(--brown-ultralight));
@@ -194,6 +253,14 @@
 }
 .content-left-item {
     border-left: 1rem solid var(--moss-medium);
+    height: 90%;
+    width: 80%;
+    transition: height 0.4s ease-in-out, width 0.4s ease-in-out;
+}
+.content-left-item:hover {
+    height: 92%;
+    width: 85%;
+    background-color: color-mix(in srgb, var(--moss-light) 95%, black)
 }
 .content-left-item > * {
     margin-left: 5px;
